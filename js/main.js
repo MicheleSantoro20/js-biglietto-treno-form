@@ -2,13 +2,10 @@ const domSubmitButton = document.getElementById ('submit');
 const domResetButton = document.getElementById ('reset');
 
 const nomeCliente = document.querySelector('#nomeCliente');
-let km = document.querySelector('#nKm');
+
 let offerte = document.querySelector('#offerte');
 const minorenne = document.querySelector('#value1');
-kmPercorsi = parseInt(km.value);
-priceKm = kmPercorsi * 0.21;
 
-console.log(priceKm);
 
 
 
@@ -18,6 +15,9 @@ domSubmitButton.addEventListener('click',
 
         nomePasseggero.innerHTML = `${nomeCliente.value}`;
         let età = document.querySelector('#age').value;
+        let km = document.querySelector('#nKm').value;
+        const priceKm = km * 0.21;
+
 
         if (età == "minorenne"){
             offerte.innerHTML = 'Offerta Minorenni';
